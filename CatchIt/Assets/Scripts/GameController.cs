@@ -28,8 +28,8 @@ public class GameController : MonoBehaviour
 		m_isPlaying = false;
 		Vector3 upperCorner = new Vector3(Screen.width, Screen.height, 0.0f);
 		Vector3 targetWidth = cam.ScreenToWorldPoint(upperCorner);
-		float ballWidth = bottles[0].GetComponent<Renderer>().bounds.extents.x;
-		m_maxWidth = targetWidth.x - ballWidth;
+		float bottleWidth = bottles[0].GetComponent<Renderer>().bounds.extents.x;
+		m_maxWidth = targetWidth.x - bottleWidth;
 
 		UpdateTimeText();
 	}
@@ -64,7 +64,7 @@ public class GameController : MonoBehaviour
 		m_isPlaying = false;
 	}
 
-	public void BallCountUpdate()
+	public void BottleCountUpdate()
 	{
 		bottleCount--;
 	}
@@ -77,12 +77,12 @@ public class GameController : MonoBehaviour
 			int rand = Random.Range(1, 4);
 			while (rand > 0)
 			{
-				GameObject ball = bottles[Random.Range(0, bottles.Length)];
+				GameObject bottle = bottles[Random.Range(0, bottles.Length)];
 				Vector3 spawnPosition = new Vector3(
 					Random.Range(-m_maxWidth, m_maxWidth),
 					transform.position.y, 0.0f);
 				Quaternion spawnRotation = Quaternion.identity;
-				Instantiate(ball, spawnPosition, spawnRotation);
+				Instantiate(bottle, spawnPosition, spawnRotation);
 				bottleCount++;
 				rand--;
 				yield return new WaitForSeconds(Random.Range(0.5f, 0.7f));

@@ -918,6 +918,7 @@ GameObject:
   - component: {fileID: 837055970}
   - component: {fileID: 837055969}
   - component: {fileID: 837055973}
+  - component: {fileID: 837055974}
   m_Layer: 0
   m_Name: Bucket
   m_TagString: Bucket
@@ -1118,6 +1119,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 776b23b9e315149488baa230c9ab2a83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &837055974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837055966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0710c0b8615bf124286a65fb8c766f06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 511718307}
+  bottleValue: 10
 --- !u!1 &1011365625
 GameObject:
   m_ObjectHideFlags: 0
@@ -1150,6 +1165,9 @@ MonoBehaviour:
   cam: {fileID: 519420031}
   bottles:
   - {fileID: 1938087810914437639, guid: f6835cd100acf41498b600943e0b1ab7, type: 3}
+  - {fileID: 7594854020133410086, guid: 788ffd3744a899a4792e267c5d14be71, type: 3}
+  - {fileID: 1938087810914437639, guid: f6835cd100acf41498b600943e0b1ab7, type: 3}
+  - {fileID: 7594854020133410086, guid: 788ffd3744a899a4792e267c5d14be71, type: 3}
   timeLeft: 60
   timerText: {fileID: 1594802312}
   gameOverText: {fileID: 187143884}
